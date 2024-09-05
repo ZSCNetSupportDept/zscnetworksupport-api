@@ -1,0 +1,10 @@
+{
+    "port": 5990,
+    "database": {
+        "path": "",
+        "user": "",
+        "password": ""
+    }
+}
+// program will use this config file to serve backend API
+
