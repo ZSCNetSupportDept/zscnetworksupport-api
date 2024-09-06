@@ -9,19 +9,11 @@
 ## 部署
 计划将本仓库部署到https://api.zsxyww.com
 
-构建需要`go`程序，运行：
+构建需要`go`，`make`程序，运行：
 
 ```sh
 
-
-
-git clone github.com/ZSCNetSupportDept/zscnetworksupport-api
-
-go install
-
-go build
-
-
+make build
 
 ```
 
