@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+
 	"github.com/ZSCNetSupportDept/zscnetworksupport-api/use"
 	"github.com/labstack/echo/v4"
 
@@ -10,8 +11,10 @@ import (
 	"strconv"
 )
 
-// _init:this function loads the config file stored at project root,and connects to the database
-func _init() *Config {
+var UseConfig *Config
+
+// sysinit:this function loads the config file stored at project root,and connects to the database
+func sysinit() *Config {
 	fmt.Println("Start and Load config file:")
 	useConfig, _ := LoadConfig("./config.json")
 	fmt.Printf("use port %d\n", useConfig.Port)
@@ -21,13 +24,13 @@ func _init() *Config {
 }
 
 func main() {
-	useConfig := _init()
+	UseConfig = sysinit()
 	app := echo.New()
 
 	use.ConfMWList(app)
 	use.ConfRouterList(app)
 
-	app.Logger.Fatal(app.Start(":" + strconv.Itoa(useConfig.Port)))
+	app.Logger.Fatal(app.Start(":" + strconv.Itoa(UseConfig.Port)))
 }
 
 func LoadConfig(filePath string) (*Config, error) {
