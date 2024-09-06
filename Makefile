@@ -4,9 +4,11 @@ install:
 	go install
 
 clean:
-	rm -rf make/*
+	rm -rf make/zscnetworksupport-api
 
 update:
 
 
 help:
+
+default: build
