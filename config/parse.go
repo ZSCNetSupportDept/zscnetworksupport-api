@@ -21,6 +21,7 @@ func LoadConfig(filePath string) {
 		fmt.Println(fmt.Errorf("error opening config file: %v", err))
 		panic("panic at Loadconfig")
 	}
+
 	UseConfig = &config
 
 }

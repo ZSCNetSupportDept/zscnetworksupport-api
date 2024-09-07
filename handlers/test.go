@@ -7,5 +7,5 @@ import (
 )
 
 func Test(c echo.Context) error {
-	return c.String(http.StatusOK, "Recieved your test POST")
+	return c.String(http.StatusFound, "Recieved your test POST")
 }
