@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-
 	"github.com/ZSCNetSupportDept/zscnetworksupport-api/config"
 	"github.com/ZSCNetSupportDept/zscnetworksupport-api/use"
 	"github.com/labstack/echo/v4"
+	"os"
 
 	"strconv"
 )
@@ -14,9 +14,12 @@ var err error
 
 // sysinit:this function loads the config file stored at project root,and connects to the database
 func sysinit() {
+	if len(os.Args) != 2 {
+		panic("we accept one and only one argument as the config file path")
+	}
 	fmt.Println("Start and Load config file:")
 
-	config.LoadConfig("./config.json")
+	config.LoadConfig(os.Args[1])
 	config.CheckConfig()
 
 	fmt.Printf("use port %d\n", config.UseConfig.Port)
