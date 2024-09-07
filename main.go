@@ -29,11 +29,14 @@ func sysinit() {
 }
 
 func main() {
+	// do necessary prepares
 	sysinit()
-	app := echo.New()
+	app := echo.New() //create a server instance
 
+	//add routers and middlewares we use
 	use.ConfMWList(app)
 	use.ConfRouterList(app)
 
+	//start the server
 	app.Logger.Fatal(app.Start(":" + strconv.Itoa(config.UseConfig.Port)))
 }
