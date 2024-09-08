@@ -1,11 +1,12 @@
 {
-    "port": 5990,
+    "port": 5990, // a interger between 1024 and 65535
     "database": {
         "path": "",
         "user": "",
         "password": ""
     }
 }
+
 // program will use this config file to serve backend API
 // this config is just a demo,please create your own
 // and exactly match the structure of this file

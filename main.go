@@ -27,7 +27,6 @@ func sysinit() {
 	fmt.Printf("use database user : %s\n", config.UseConfig.Database.User)
 
 }
-
 func main() {
 	// do necessary prepares
 	sysinit()
