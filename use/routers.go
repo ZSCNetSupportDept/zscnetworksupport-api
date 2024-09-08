@@ -11,4 +11,5 @@ func ConfRouterList(app *echo.Echo) {
 	//test API
 	app.POST("/test", handler.Test)
 	app.GET("/test", handler.TestGET)
+	app.GET("/testdb", handler.TestSQLite)
 }

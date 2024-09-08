@@ -1,7 +1,9 @@
 {
-    "port": 5990, // a interger between 1024 and 65535
+    "port": 5990,
     "database": {
-        "path": "",
+        "type":"",
+        "path": "./Hello",
+        "port":"",
         "user": "",
         "password": ""
     }
