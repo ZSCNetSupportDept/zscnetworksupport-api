@@ -1,11 +1,12 @@
 {
     "port": 5990,
     "database": {
-        "type":"",
-        "path": "./Hello",
-        "port":"",
-        "user": "",
-        "password": ""
+        "Type":"SQLite",
+        "Path": "./Hello",
+        "Port":"",
+        "User": "",
+        "name":"",
+        "Password": ""
     }
 }
 
