@@ -33,11 +33,11 @@ type Ticket struct {
 
 // 新生报名的记录
 type Volunteer struct {
-	ID      int `gorm:"PrimaryKey"` //学号
-	Name    string
-	Phone   int
-	Major   int //详见文档
-	College int //看文档
+	ID      int    `gorm:"PrimaryKey" json:"ID"` //学号
+	Name    string `json:"Name"`
+	Phone   int    `json:"Phone"`
+	Major   int    `json:"Major"`   //详见文档
+	College int    `json:"College"` //看文档
 }
 
 // 工单修改的记录
