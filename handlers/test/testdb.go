@@ -8,7 +8,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func TestSQLite(c echo.Context) error {
+func (self Test) TestSQLite(c echo.Context) error {
 	co, err := database.ConnectSQLite()
 	if err != nil {
 		fmt.Println(fmt.Errorf("error In TestSQLite(): %v", err))
