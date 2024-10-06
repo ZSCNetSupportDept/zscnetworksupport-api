@@ -14,15 +14,16 @@ type Member struct {
 
 // GetByID通过一个成员的ID来返回这个成员的所有信息，还会返回一个错误类型，你需要判断操作有没有出错
 func (self *Member) GetByID(id int) error {
-
+	return nil
+	// 这里在施工中。。。
 }
 
 // Store将一个成员的信息存储到数据库中，你需要提供一个指向Member数据的指针，该成员的ID不能和已有的ID相同，否则会返回错误，修改信息不要用这个，这个一般用作录入信息
 func (self *Member) Store(source *Member) error {
-
+	return nil
 }
 
 // AccessChange修改一个成员的权限，你需要提供新的权限代码，出错了会返回一些错误
 func (self *Member) AccessChange(accessNew int) error {
-
+	return nil
 }

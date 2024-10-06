@@ -1,26 +1,22 @@
 package handler
 
 import (
-	"github.com/labstack/echo/v4"
+	"github.com/ZSCNetSupportDept/zscnetworksupport-api/databases"
+	// "github.com/labstack/echo/v4"
 	"gorm.io/gorm"
 )
 
-type Test struct {
-	Usingdb *gorm.DB
+// NewRecruitHandler新建一个招新handler的实例
+func NewRecruitHandler(usingdb *gorm.DB) (handler *Recruit, err error) {
+	zx := new(Recruit)
+	zx.usingdb = database.Usingdb
+	return zx, nil
 }
 
-type Recruit struct {
-	Usingdb *gorm.DB
-}
+// NewTicketHandler新建一个工单handler的实例
+func NewTicketHandler(usingdb *gorm.DB) (handler *Ticket, err error) {
+	gd := new(Ticket)
+	gd.usingdb = database.Usingdb
+	return gd, nil
 
-type Ticket struct {
-	Usingdb *gorm.DB
-}
-
-type Handler interface {
-	IsHandler()
-}
-
-func (self Test) IsHandler() bool {
-	return true
 }
