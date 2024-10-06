@@ -11,7 +11,11 @@ type Member struct {
 }
 
 // GetAll返回当前的所有成员
-func (self Member) GetAll(i echo.Context) error
+func (self Member) GetAll(i echo.Context) error {
+	return nil
+}
 
 // GetTodayAssign返回当天的值班信息
-func (self Member) GetTodayAssign(i echo.Context) error
+func (self Member) GetTodayAssign(i echo.Context) error {
+	return nil
+}
